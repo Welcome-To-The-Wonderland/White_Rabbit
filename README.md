@@ -9,7 +9,9 @@ My Attempt at creating a manga reader
    - sort by latest read, latest download, latest release (needs more scraping info),
   
 
-
+App Plan: 
+- PRIORITY TO GET IOS APP RUNNING
+- Maybe use React to develop since it works well with web, android, ios
 
 
 
