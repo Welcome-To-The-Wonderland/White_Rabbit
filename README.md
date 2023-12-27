@@ -7,6 +7,7 @@ My Attempt at creating a manga reader
 4. Possible features???
    - Keep track of read/unread/current chapter
    - sort by latest read, latest download, latest release (needs more scraping info),
+   - Double page view feature, read from left to right, long strip view, single page view
   
 
 App Plan: 
