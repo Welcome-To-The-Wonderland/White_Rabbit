@@ -8,7 +8,9 @@ My Attempt at creating a manga reader
    - Keep track of read/unread/current chapter
    - sort by latest read, latest download, latest release (needs more scraping info),
    - Double page view feature, read from left to right, long strip view, single page view
-  
+   - reccomendations list based on
+      - users of similar interest
+         - genre, author, description summary key terms, stars
 
 App Plan: 
 - PRIORITY TO GET IOS APP RUNNING
