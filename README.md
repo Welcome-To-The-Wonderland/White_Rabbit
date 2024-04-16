@@ -11,6 +11,7 @@ My Attempt at creating a manga reader
    - reccomendations list based on
       - users of similar interest
          - genre, author, description summary key terms, stars
+         - (could use MAL api????)
 
 App Plan: 
 - PRIORITY TO GET IOS APP RUNNING
