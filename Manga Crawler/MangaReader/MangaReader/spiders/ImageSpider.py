@@ -1,7 +1,8 @@
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 
-# https://kissmanga.org/manga/manga-ny991307
+# Command: 
+# scrapy crawl mycrawler -o output.txt
 
 class CrawlingSpider(CrawlSpider):
     name = "mycrawler"
@@ -9,5 +10,9 @@ class CrawlingSpider(CrawlSpider):
     start_urls = ["https://kissmanga.org/manga/manga-ny991307"]
 
     rules = (
-        Rule(LinkExtractor(allow="chapter/manga-ny991307/")),
+        Rule(LinkExtractor(allow="chapter/manga-ny991307/"), callback='parse_item'),
     )
+
+    def parse_item(self, response):
+        # parsing code goes here
+        pass
