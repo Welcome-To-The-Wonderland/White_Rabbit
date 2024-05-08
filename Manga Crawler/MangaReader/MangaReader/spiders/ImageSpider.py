@@ -2,11 +2,11 @@ from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 
 # Command: 
-# scrapy crawl mycrawler -o output.txt
+# scrapy crawl mycrawler -o output.json
 
 class CrawlingSpider(CrawlSpider):
     name = "mycrawler"
-    allowed_domains = ["kissmanga.org"]
+    allowed_domains = ["kissmanga.org"] 
     start_urls = ["https://kissmanga.org/manga/manga-ny991307"]
 
     rules = (
@@ -14,5 +14,7 @@ class CrawlingSpider(CrawlSpider):
     )
 
     def parse_item(self, response):
+        # Use the middleware methods here
+        response = self.crawler.middlewares.get('MangareaderSpiderMiddleware').process_spider_input(response, self)
         # parsing code goes here
         pass
