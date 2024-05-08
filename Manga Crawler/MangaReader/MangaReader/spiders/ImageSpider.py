@@ -1,6 +1,8 @@
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 
+# https://docs.scrapy.org/en/latest/intro/overview.html
+
 # Command: 
 # scrapy crawl mycrawler -o output.json
 
@@ -16,5 +18,7 @@ class CrawlingSpider(CrawlSpider):
     def parse_item(self, response):
         # Use the middleware methods here
         response = self.crawler.middlewares.get('MangareaderSpiderMiddleware').process_spider_input(response, self)
-        # parsing code goes here
-        pass
+        # parsing code
+        item = {}
+        item['url'] = response.url
+        return item
