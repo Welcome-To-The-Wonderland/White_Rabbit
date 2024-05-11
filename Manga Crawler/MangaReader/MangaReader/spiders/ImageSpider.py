@@ -16,7 +16,7 @@ class CrawlingSpider(CrawlSpider):
         Rule(LinkExtractor(allow="chapter/manga-ny991307/"), callback='parse_item'),
     )
 
-    def parse_item(self, response):        
+    def parse_item(self, response):
         series = response.url.split('/')[4].split('-')[1]
         chapter_number = response.url[-1]
         item = {}
