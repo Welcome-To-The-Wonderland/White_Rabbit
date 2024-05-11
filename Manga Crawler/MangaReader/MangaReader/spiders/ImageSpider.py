@@ -1,5 +1,6 @@
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
+from scrapy import Item, Field
 
 # https://docs.scrapy.org/en/latest/intro/overview.html
 
@@ -15,10 +16,9 @@ class CrawlingSpider(CrawlSpider):
         Rule(LinkExtractor(allow="chapter/manga-ny991307/"), callback='parse_item'),
     )
 
-    def parse_item(self, response):
-        # Use the middleware methods here
-        response = self.crawler.middlewares.get('MangareaderSpiderMiddleware').process_spider_input(response, self)
-        # parsing code
+    def parse_item(self, response):        
+        series = response.url.split('/')[4].split('-')[1]
+        chapter_number = response.url[-1]
         item = {}
-        item['url'] = response.url
+        item[series] = [{chapter_number: response.url}]
         return item
