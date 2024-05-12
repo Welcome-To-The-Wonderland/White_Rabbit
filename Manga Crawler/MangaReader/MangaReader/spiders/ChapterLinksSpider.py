@@ -4,10 +4,10 @@ from scrapy.linkextractors import LinkExtractor
 # https://docs.scrapy.org/en/latest/intro/overview.html
 
 # Command: 
-# scrapy crawl mycrawler -o output.json
+# scrapy crawl linkCrawler -o output.json
 
 class CrawlingSpider(CrawlSpider):
-    name = "mycrawler"
+    name = "linkCrawler"
     allowed_domains = ["kissmanga.org"] 
     start_urls = ["https://kissmanga.org/manga/manga-ny991307"]
     base_url = "chapter/manga-ny991307/" #change to input based later
