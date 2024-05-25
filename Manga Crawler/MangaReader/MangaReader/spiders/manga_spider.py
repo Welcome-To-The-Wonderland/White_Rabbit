@@ -1,6 +1,7 @@
 import scrapy
 import re
 import os
+from urllib.parse import urlparse, urlunparse
 
 # scrapy crawl manga -o manga.json
 
@@ -14,8 +15,8 @@ class MangaLinkSpider(scrapy.Spider):
             os.remove("manga.json")
     
     start_urls = [
-        #"https://kissmanga.org/manga/manga-ny991307"
-        "https://kissmanga.org/manga/manga-ln951470"
+        "https://kissmanga.org/manga/manga-ny991307"
+        #"https://kissmanga.org/manga/manga-ln951470"
     ]
     
     
@@ -27,6 +28,12 @@ class MangaLinkSpider(scrapy.Spider):
         chapter_urls = []
         chapter_urls = response.css("h3 a::attr(href)").getall()
         
+        #why is adding .jpg to a string such a pain in the a**
+        parsed_url = urlparse(response.url)
+        manga_id = parsed_url.path.split('/')[-1]
+        new_path = "/mangaimage/" + manga_id + ".jpg"
+        cover = urlunparse((parsed_url.scheme, parsed_url.netloc, new_path, '', '', ''))
+        
         for url in chapter_urls:
             chapter_number = re.findall(r'\d+\.?\d*$', url)[0]
             yield scrapy.Request(response.urljoin(url), callback=self.parse_chapter, 
@@ -34,7 +41,8 @@ class MangaLinkSpider(scrapy.Spider):
                                         'title': title,
                                         'author': author,
                                         'genres': genres,
-                                        'chapter' : chapter_number
+                                        'chapter' : chapter_number,
+                                        'cover': cover,
                                        })
         
     def parse_chapter(self, response):
@@ -47,4 +55,5 @@ class MangaLinkSpider(scrapy.Spider):
                     #"Author": response.meta['author'], #bugged extraction
                     #"Genres": response.meta['genres'], #bugged extraction
                 }, 
+            "cover": response.meta['cover'],
         }
