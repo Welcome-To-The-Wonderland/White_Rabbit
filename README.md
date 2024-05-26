@@ -15,6 +15,8 @@ My Attempt at creating a manga reader
          - genre, author, description summary key terms, stars
          - (could use MAL api????)
          - So excited :D XD >v<
+   - Consolidate All chapters into 1 long strips that tracks
+     what chapter and what position you are currently on
 5. Integrate SQL
    - utilize a relational data base to...
    - store info on a user
