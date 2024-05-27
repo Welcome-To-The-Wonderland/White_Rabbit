@@ -43,13 +43,15 @@ class MangaLinkSpider(scrapy.Spider):
                                         'genres': genres,
                                         'chapter' : chapter_number,
                                         'cover': cover,
+                                        'id': manga_id,
                                        })
         
     def parse_chapter(self, response):
         image_urls = response.css("div#centerDivVideo img::attr(src)").getall()
         yield {
-            response.meta['title']:
+            response.meta['id'] :
                 {
+                    "Title": response.meta['title'],
                     "Chapter": response.meta['chapter'],
                     "Images": image_urls,
                     #"Author": response.meta['author'], #bugged extraction
