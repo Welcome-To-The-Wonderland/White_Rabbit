@@ -2,6 +2,9 @@ import scrapy
 import re
 import os
 from urllib.parse import urlparse, urlunparse
+import json
+from collections import defaultdict
+import subprocess
 
 # scrapy crawl manga -o manga.json
 
@@ -15,8 +18,10 @@ class MangaLinkSpider(scrapy.Spider):
             os.remove("manga.json")
     
     start_urls = [
-        "https://kissmanga.org/manga/manga-ny991307"
+        "https://kissmanga.org/manga/manga-ny991307",
         #"https://kissmanga.org/manga/manga-ln951470"
+        "https://kissmanga.org/manga/manga-bc979159",
+        "https://kissmanga.org/manga/manga-oh991742",
     ]
     
     
@@ -36,6 +41,8 @@ class MangaLinkSpider(scrapy.Spider):
         
         for url in chapter_urls:
             chapter_number = re.findall(r'\d+\.?\d*$', url)[0]
+            uid = str(chapter_number).replace('.', '-')
+            uid = f"{manga_id}-{uid}"
             yield scrapy.Request(response.urljoin(url), callback=self.parse_chapter, 
                                  meta={
                                         'title': title,
@@ -43,19 +50,33 @@ class MangaLinkSpider(scrapy.Spider):
                                         'genres': genres,
                                         'chapter' : chapter_number,
                                         'cover': cover,
-                                        'id': manga_id,
+                                        'manga-id': manga_id,
+                                        'uid': uid,
                                        })
         
     def parse_chapter(self, response):
         image_urls = response.css("div#centerDivVideo img::attr(src)").getall()
         yield {
-            response.meta['id'] :
-                {
+            #response.meta['uid']:
+            #    {
+                    "uid": response.meta['uid'],
                     "Title": response.meta['title'],
-                    "Chapter": response.meta['chapter'],
+                    "Chapter": float(response.meta['chapter']),
                     "Images": image_urls,
                     #"Author": response.meta['author'], #bugged extraction
                     #"Genres": response.meta['genres'], #bugged extraction
-                }, 
-            "cover": response.meta['cover'],
+                    "cover": response.meta['cover'],
+             #   }, 
         }
+    
+    # def close(self, reason):
+    #     # Sort the items by uid.
+    #     # self.items.sort(key=lambda item: item['uid'])
+
+    #     # # Write the sorted items to the JSON file.
+    #     # with open('manga.json', 'w') as f:
+    #     #     json.dump(self.items, f)
+    #     try:
+    #         subprocess.run(["python", "sorting.py"], check=True)
+    #     except Exception as e:
+    #         print(f"Failed to run subprocess: {e}")
