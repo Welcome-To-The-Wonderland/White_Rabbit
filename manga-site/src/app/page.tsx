@@ -1,7 +1,8 @@
 'use client'
-import data from '../manga.json'
-import React, { useState } from 'react'
-import Link from 'next/link'
+import data from '../manga.json';
+import React, { useState } from 'react';
+// import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import './home.css'
 
 export default function Home() {
@@ -21,17 +22,18 @@ export default function Home() {
     }
   })
 
-
   return (
     <div>
       <h1>Look at me</h1>
+  
       {pairs.map((pair, index) => (
-        <img 
-          key={index} 
-          className="images" 
-          src={pair.cover} 
-          alt={`Cover ${pair.id}`} 
-        />
+        <Link href={`/manga/${pair.id}`} key={index} passHref> 
+          <img 
+            className="images"
+            src={pair.cover} 
+            alt={`Cover ${pair.id}`} 
+          />
+        </Link>
       ))}
     </div>
   )

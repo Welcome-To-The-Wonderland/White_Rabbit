@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <div>
-      <button onClick={() => navigateToManga('1')}>Go to Manga 1</button>
+      
     </div>
   )
 }
