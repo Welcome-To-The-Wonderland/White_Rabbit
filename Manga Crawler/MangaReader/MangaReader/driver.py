@@ -1,6 +1,6 @@
 import subprocess
 
-# Run the scrapy command
+# Run the scrapy spider command for manga crawler 
 subprocess.run(["scrapy", "crawl", "manga", "-o", "manga.json"], check=True)
 
 # Run the Python script

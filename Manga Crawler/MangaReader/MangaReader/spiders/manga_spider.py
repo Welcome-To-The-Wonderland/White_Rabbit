@@ -57,26 +57,11 @@ class MangaLinkSpider(scrapy.Spider):
     def parse_chapter(self, response):
         image_urls = response.css("div#centerDivVideo img::attr(src)").getall()
         yield {
-            #response.meta['uid']:
-            #    {
-                    "uid": response.meta['uid'],
-                    "Title": response.meta['title'],
-                    "Chapter": float(response.meta['chapter']),
-                    "Images": image_urls,
-                    #"Author": response.meta['author'], #bugged extraction
-                    #"Genres": response.meta['genres'], #bugged extraction
-                    "cover": response.meta['cover'],
-             #   }, 
+                "uid": response.meta['uid'],
+                "Title": response.meta['title'],
+                "Chapter": float(response.meta['chapter']),
+                "Images": image_urls,
+                #"Author": response.meta['author'], #bugged extraction
+                #"Genres": response.meta['genres'], #bugged extraction
+                "cover": response.meta['cover'],
         }
-    
-    # def close(self, reason):
-    #     # Sort the items by uid.
-    #     # self.items.sort(key=lambda item: item['uid'])
-
-    #     # # Write the sorted items to the JSON file.
-    #     # with open('manga.json', 'w') as f:
-    #     #     json.dump(self.items, f)
-    #     try:
-    #         subprocess.run(["python", "sorting.py"], check=True)
-    #     except Exception as e:
-    #         print(f"Failed to run subprocess: {e}")
