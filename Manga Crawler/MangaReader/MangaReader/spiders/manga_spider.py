@@ -28,6 +28,7 @@ class MangaLinkSpider(scrapy.Spider):
     def parse(self, response):
         #general info to pass as meta
         title = response.css("h2 strong.bigChar::text").get()
+        title = title.replace('’', "'") # Temp fix bug where special characters (like " ' ") are outputted as their unicode values
         author = response.css("p.info span::text").getall() # bug, white space bullshit. Maybe use .strip()
         genres = response.css("p.info span::text").getall() # bug, white space bullshit. Maybe use .strip()
         chapter_urls = []

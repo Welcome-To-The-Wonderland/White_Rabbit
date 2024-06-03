@@ -1,8 +1,7 @@
-[
-    [
+{
+    "Beank & Rosa": [
         {
             "uid": "manga-bc979159-1",
-            "Title": "Beank & Rosa",
             "Chapter": 1.0,
             "Images": [
                 "https://cm.blazefast.co/ee/f5/eef5153ec81228cdafde9abe4a8f3262.jpg",
@@ -34,7 +33,6 @@
         },
         {
             "uid": "manga-bc979159-2",
-            "Title": "Beank & Rosa",
             "Chapter": 2.0,
             "Images": [
                 "https://cm.blazefast.co/9f/eb/9feb61a2090a88164198b689af12cc62.jpg",
@@ -60,7 +58,6 @@
         },
         {
             "uid": "manga-bc979159-3",
-            "Title": "Beank & Rosa",
             "Chapter": 3.0,
             "Images": [
                 "https://cm.blazefast.co/56/59/5659fd0ecad454cc4bd17c04b1293fdb.jpg",
@@ -88,7 +85,6 @@
         },
         {
             "uid": "manga-bc979159-4",
-            "Title": "Beank & Rosa",
             "Chapter": 4.0,
             "Images": [
                 "https://cm.blazefast.co/f9/30/f93040380e9ffafd587e1c78d9da7c67.jpg",
@@ -114,7 +110,6 @@
         },
         {
             "uid": "manga-bc979159-5",
-            "Title": "Beank & Rosa",
             "Chapter": 5.0,
             "Images": [
                 "https://cm.blazefast.co/e0/0d/e00d3ac06447cffca00d535375cd76f3.jpg",
@@ -140,7 +135,6 @@
         },
         {
             "uid": "manga-bc979159-6",
-            "Title": "Beank & Rosa",
             "Chapter": 6.0,
             "Images": [
                 "https://cm.blazefast.co/6c/67/6c674a03a6f1658e9b3563ea74d19d57.jpg",
@@ -170,7 +164,6 @@
         },
         {
             "uid": "manga-bc979159-7",
-            "Title": "Beank & Rosa",
             "Chapter": 7.0,
             "Images": [
                 "https://cm.blazefast.co/26/4e/264eb6603556e251cd181ead0e4d4315.jpg",
@@ -196,7 +189,6 @@
         },
         {
             "uid": "manga-bc979159-8",
-            "Title": "Beank & Rosa",
             "Chapter": 8.0,
             "Images": [
                 "https://cm.blazefast.co/88/24/8824f3e5688e241ff2f349e4d14fe123.jpg",
@@ -226,7 +218,6 @@
         },
         {
             "uid": "manga-bc979159-9",
-            "Title": "Beank & Rosa",
             "Chapter": 9.0,
             "Images": [
                 "https://cm.blazefast.co/d0/8b/d08ba8bf39402bf906a32d91a86dfef3.jpg",
@@ -252,7 +243,6 @@
         },
         {
             "uid": "manga-bc979159-10",
-            "Title": "Beank & Rosa",
             "Chapter": 10.0,
             "Images": [
                 "https://cm.blazefast.co/4f/be/4fbe198729eadce1c051792e5bebe1a5.jpg",
@@ -276,7 +266,6 @@
         },
         {
             "uid": "manga-bc979159-11",
-            "Title": "Beank & Rosa",
             "Chapter": 11.0,
             "Images": [
                 "https://cm.blazefast.co/7f/a0/7fa05ea2486303e9d58705e979eba091.jpg",
@@ -302,7 +291,6 @@
         },
         {
             "uid": "manga-bc979159-12",
-            "Title": "Beank & Rosa",
             "Chapter": 12.0,
             "Images": [
                 "https://cm.blazefast.co/bc/71/bc71bf340ebe579bd3ecae6efc302732.jpg",
@@ -330,7 +318,6 @@
         },
         {
             "uid": "manga-bc979159-13",
-            "Title": "Beank & Rosa",
             "Chapter": 13.0,
             "Images": [
                 "https://cm.blazefast.co/66/0c/660cf63fcf2778b163e248722929d94a.jpg",
@@ -359,7 +346,6 @@
         },
         {
             "uid": "manga-bc979159-13-5",
-            "Title": "Beank & Rosa",
             "Chapter": 13.5,
             "Images": [
                 "https://cm.blazefast.co/3e/8c/3e8c91e5dea2313ce93581b97771c10e.jpg",
@@ -374,10 +360,9 @@
             "cover": "https://kissmanga.org/mangaimage/manga-bc979159.jpg"
         }
     ],
-    [
+    "I'M Trapped In This Day For Three Thousand Years": [
         {
             "uid": "manga-oh991742-0",
-            "Title": "I\u00e2\u20ac\u2122M Trapped In This Day For Three Thousand Years",
             "Chapter": 0.0,
             "Images": [
                 "https://cm.blazefast.co/55/d7/55d768f04e5686794d37c35e492c0025.jpg",
@@ -390,7 +375,6 @@
         },
         {
             "uid": "manga-oh991742-0-1",
-            "Title": "I\u00e2\u20ac\u2122M Trapped In This Day For Three Thousand Years",
             "Chapter": 0.1,
             "Images": [
                 "https://cm.blazefast.co/07/de/07dedb5841d77e30ee7c0f2e97ad27f8.jpg",
@@ -415,7 +399,6 @@
         },
         {
             "uid": "manga-oh991742-1",
-            "Title": "I\u00e2\u20ac\u2122M Trapped In This Day For Three Thousand Years",
             "Chapter": 1.0,
             "Images": [
                 "https://cm.blazefast.co/01/70/01700211ab381a916730c2011b769b61.jpg",
@@ -477,7 +460,6 @@
         },
         {
             "uid": "manga-oh991742-2",
-            "Title": "I\u00e2\u20ac\u2122M Trapped In This Day For Three Thousand Years",
             "Chapter": 2.0,
             "Images": [
                 "https://cm.blazefast.co/45/96/4596b470b99d954cc54a09ff0da4c20c.jpg",
@@ -547,7 +529,6 @@
         },
         {
             "uid": "manga-oh991742-3",
-            "Title": "I\u00e2\u20ac\u2122M Trapped In This Day For Three Thousand Years",
             "Chapter": 3.0,
             "Images": [
                 "https://cm.blazefast.co/29/5a/295a915058a81f5c61c3d7eb3b86a86f.jpg",
@@ -593,7 +574,6 @@
         },
         {
             "uid": "manga-oh991742-4",
-            "Title": "I\u00e2\u20ac\u2122M Trapped In This Day For Three Thousand Years",
             "Chapter": 4.0,
             "Images": [
                 "https://cm.blazefast.co/9d/95/9d95a2ff9be76926735ae4f662dda73c.jpg",
@@ -646,7 +626,6 @@
         },
         {
             "uid": "manga-oh991742-5",
-            "Title": "I\u00e2\u20ac\u2122M Trapped In This Day For Three Thousand Years",
             "Chapter": 5.0,
             "Images": [
                 "https://cm.blazefast.co/fe/86/fe869e02eb88eee3e53a9e2feb7792ed.jpg",
@@ -703,7 +682,6 @@
         },
         {
             "uid": "manga-oh991742-6",
-            "Title": "I\u00e2\u20ac\u2122M Trapped In This Day For Three Thousand Years",
             "Chapter": 6.0,
             "Images": [
                 "https://cm.blazefast.co/f3/3e/f33e54a6845d1938503c1542ccdf02aa.jpg",
@@ -750,10 +728,9 @@
             "cover": "https://kissmanga.org/mangaimage/manga-oh991742.jpg"
         }
     ],
-    [
+    "Level 999 Demon Lord And A Level 1 Slime": [
         {
             "uid": "manga-ny991307-1",
-            "Title": "Level 999 Demon Lord And A Level 1 Slime",
             "Chapter": 1.0,
             "Images": [
                 "https://cm.blazefast.co/2d/bd/2dbd487cb19f8c117c91baf7bddae5d7.jpg",
@@ -765,7 +742,6 @@
         },
         {
             "uid": "manga-ny991307-2",
-            "Title": "Level 999 Demon Lord And A Level 1 Slime",
             "Chapter": 2.0,
             "Images": [
                 "https://cm.blazefast.co/00/9f/009f35012de3525c741dbf70668dcf8d.jpg",
@@ -777,7 +753,6 @@
         },
         {
             "uid": "manga-ny991307-3",
-            "Title": "Level 999 Demon Lord And A Level 1 Slime",
             "Chapter": 3.0,
             "Images": [
                 "https://cm.blazefast.co/5c/d3/5cd3f121c61751a4e8ae15ec06120144.jpg",
@@ -789,7 +764,6 @@
         },
         {
             "uid": "manga-ny991307-4",
-            "Title": "Level 999 Demon Lord And A Level 1 Slime",
             "Chapter": 4.0,
             "Images": [
                 "https://cm.blazefast.co/71/2f/712f6a2350d4a5d36bbca711efba0472.jpg",
@@ -801,7 +775,6 @@
         },
         {
             "uid": "manga-ny991307-5",
-            "Title": "Level 999 Demon Lord And A Level 1 Slime",
             "Chapter": 5.0,
             "Images": [
                 "https://cm.blazefast.co/46/6e/466ea679e7d4c06d3af2bcd636ccc3f5.jpg",
@@ -813,7 +786,6 @@
         },
         {
             "uid": "manga-ny991307-6",
-            "Title": "Level 999 Demon Lord And A Level 1 Slime",
             "Chapter": 6.0,
             "Images": [
                 "https://cm.blazefast.co/37/24/37241c12c98df16897c39fee53d50522.jpg",
@@ -825,7 +797,6 @@
         },
         {
             "uid": "manga-ny991307-7",
-            "Title": "Level 999 Demon Lord And A Level 1 Slime",
             "Chapter": 7.0,
             "Images": [
                 "https://cm.blazefast.co/2f/17/2f17f43e8ee6a804b0c6b697263c9085.jpg",
@@ -837,7 +808,6 @@
         },
         {
             "uid": "manga-ny991307-8",
-            "Title": "Level 999 Demon Lord And A Level 1 Slime",
             "Chapter": 8.0,
             "Images": [
                 "https://cm.blazefast.co/0e/d0/0ed0423cd6cff24f3919b18d04b815c8.jpg",
@@ -849,7 +819,6 @@
         },
         {
             "uid": "manga-ny991307-9",
-            "Title": "Level 999 Demon Lord And A Level 1 Slime",
             "Chapter": 9.0,
             "Images": [
                 "https://cm.blazefast.co/ed/e5/ede5b227c295285bd2a644166a9dba1e.jpg",
@@ -867,4 +836,4 @@
             "cover": "https://kissmanga.org/mangaimage/manga-ny991307.jpg"
         }
     ]
-]
+}

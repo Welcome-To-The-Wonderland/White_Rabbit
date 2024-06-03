@@ -12,9 +12,12 @@ def sort_json():
     data.sort(key=itemgetter('Title', 'Chapter'))
 
     # Group the data by "Title"
-    grouped_data = []
+    grouped_data = {}
     for key, group in groupby(data, key=itemgetter('Title')):
-        grouped_data.append(list(group))
+        group_list = list(group)
+        for item in group_list:
+            del item['Title']
+        grouped_data[key] = group_list
 
     with open('manga.json', 'w') as f:
         json.dump(grouped_data, f, indent=4)
