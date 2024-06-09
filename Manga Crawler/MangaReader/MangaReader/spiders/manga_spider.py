@@ -58,6 +58,7 @@ class MangaLinkSpider(scrapy.Spider):
     def parse_chapter(self, response):
         image_urls = response.css("div#centerDivVideo img::attr(src)").getall()
         yield {
+                "manga-id" : response.meta['manga-id'],
                 "uid": response.meta['uid'],
                 "Title": response.meta['title'],
                 "Chapter": float(response.meta['chapter']),
