@@ -61,6 +61,14 @@ class MangareaderDownloaderMiddleware:
     # scrapy acts as if the downloader middleware does not modify the
     # passed objects.
 
+    DOWNLOADER_MIDDLEWARES = {
+    'MangaReader.middlewares.MangareaderDownloaderMiddleware': 543,
+    }
+
+    SPIDER_MIDDLEWARES = {
+    'MangaReader.middlewares.MangareaderSpiderMiddleware': 543,
+    }
+
     @classmethod
     def from_crawler(cls, crawler):
         # This method is used by Scrapy to create your spiders.
