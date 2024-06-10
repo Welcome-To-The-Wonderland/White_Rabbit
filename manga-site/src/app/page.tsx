@@ -4,7 +4,7 @@ import './home.css'
 import Link from 'next/link'
 
 export default function Home() {
-  let x = "manga-oh991742";
+  let x = "manga-ny991307";
 
   return (
     <div>

@@ -1,0 +1,37 @@
+'use client'
+import React from 'react';
+import { usePathname } from 'next/navigation'
+
+interface MangaInfo {
+    title : string;
+    cover : string;
+    chapters : Chapter[];
+}
+  
+  interface MangaData {
+    [key: string]: MangaInfo;
+  }
+  
+  interface Chapter {
+    number: number;
+    images: string[];
+    uid : string
+  }
+
+export default function Chapter() {
+    const manga: MangaData = require("./../../../../manga.json");
+    const pathname = usePathname();
+    let splitPath = pathname.split('/');
+    let out = splitPath[splitPath.length - 1];
+    let id = out.split('-')[0] + "-" + out.split('-')[1];
+
+    const mangaInfo = manga.manga.find(manga => manga.uid === id);
+
+    return(
+        <div>
+            <h1>Chapter page</h1>
+            <h1> uid: {out}</h1>
+            <h1> {id} </h1>
+        </div>
+    )
+}
