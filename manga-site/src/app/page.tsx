@@ -13,6 +13,21 @@ export default function Home() {
         pathname: `/manga/${x}`,
       }}> some link
       </Link>
+
+      <div className="grid">
+        {Object.entries(data).map(([key, manga]: [string, any]) => {
+          return (
+            <div key={key} className="card">
+              <Link href = {{
+                pathname: `/manga/${key}`,
+              }}> 
+              <img src={manga.cover_link} alt={manga.title} />
+              <h3>{manga.title}</h3>
+              </Link>
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }
